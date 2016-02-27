@@ -1,10 +1,4 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^landing2top\.ru$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.landing2top\.ru$
-RewriteRule ^/?$ "http\:\/\/SOZDANIESAJTOV\.COM\/" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^www\.sozdaniesajtov\.com$
-RewriteRule ^/?$ "http\:\/\/SOZDANIESAJTOV\.COM\/" [R=301,L]
 
 <ifModule mod_expires.c>
 
@@ -45,3 +39,18 @@ ExpiresByType text/html "access plus 600 seconds"
 ExpiresByType application/xhtml+xml "access plus 600 seconds"
 
 </ifModule>
+RewriteCond %{HTTP_HOST} ^a3489007\.hostink\.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.a3489007\.hostink\.ru$
+RewriteRule ^(.*)$ "http\:\/\/SOZDANIESAJTOV\.COM\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^landing2top\.a3489007\.hostink\.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.landing2top\.a3489007\.hostink\.ru$
+RewriteRule ^(.*)$ "http\:\/\/SOZDANIESAJTOV\.COM\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^landing2top\.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.landing2top\.ru$
+RewriteRule ^(.*)$ "http\:\/\/SOZDANIESAJTOV\.COM\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.sozdaniesajtov\.com$
+RewriteRule ^(.*)$ "http\:\/\/SOZDANIESAJTOV\.COM\/$1" [R=301,L]
+

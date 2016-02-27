@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /*
-
+Sitemap: http://sozdaniesajtov.com/sitemap.xml
 Host: sozdaniesajtov.com
