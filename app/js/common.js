@@ -149,6 +149,10 @@ $(function() {
 				// options
 				var options = {
 					title: 'Позиции сайта в Яндекс и Google',
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
 					colors: ['#f00', '#4285F4'],
 					hAxis: {
 						title: 'Месяц продвижения',
@@ -217,6 +221,10 @@ $(function() {
 				// options
 				var options = {
 					title: 'Позиции сайта в Яндекс и Google',
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
 					colors: ['#f00', '#4285F4'],
 					hAxis: {
 						title: 'Месяц продвижения',
@@ -279,6 +287,10 @@ $(function() {
 				// options
 				var options = {
 					title: 'Позиции сайта в Яндекс и Google',
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
 					colors: ['#f00', '#4285F4'],
 					hAxis: {
 						title: 'Месяц продвижения',
@@ -341,6 +353,10 @@ $(function() {
 				// options
 				var options = {
 					title: 'Позиции сайта в Яндекс и Google',
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
 					colors: ['#f00', '#4285F4'],
 					hAxis: {
 						title: 'Месяц продвижения',
@@ -391,7 +407,12 @@ $(function() {
 
 				var options = {
 					title: 'Кол-во поситителей, до и после продвижения',
-					colors: ['#999', '#f90'],
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
+					colors: ['#555', '#f90'],
+					pieHole: 0.3,
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_div_0_1'));
@@ -409,7 +430,12 @@ $(function() {
 
 				var options = {
 					title: 'Кол-во поситителей, до и после продвижения',
-					colors: ['#999', '#f90'],
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
+					colors: ['#555', '#f90'],
+					pieHole: 0.3,
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_div_1_1'));
@@ -427,7 +453,12 @@ $(function() {
 
 				var options = {
 					title: 'Кол-во поситителей, до и после продвижения',
-					colors: ['#999', '#f90'],
+					titleTextStyle: {
+						fontSize: 12
+					},
+					// width: 300,
+					colors: ['#555', '#f90'],
+					pieHole: 0.3,
 				};
 
 				var chart = new google.visualization.PieChart(document.getElementById('chart_div_2_1'));
