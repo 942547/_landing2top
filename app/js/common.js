@@ -116,38 +116,263 @@ $(function() {
 	// $('.imagefill').imagefill();
 
 	// Google
-	// Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
+	google.charts.load('current', {packages: ['corechart', 'line']});
+	google.charts.setOnLoadCallback(drawCurveTypes_0);
+	google.charts.setOnLoadCallback(drawCurveTypes_1);
+	google.charts.setOnLoadCallback(drawCurveTypes_2);
+	google.charts.setOnLoadCallback(drawCurveTypes_3);
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
+	function drawCurveTypes_0() {
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
+				// data
+				var data = new google.visualization.DataTable();
+				data.addColumn('number', 'X');
+				data.addColumn('number', 'Яндекс');
+				data.addColumn('number', 'Google');
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
-        ]);
+				data.addRows([
+					[0, 50, 50],
+					[1, 9, 5],
+					[2, 8, 3],
+					[3, 4, 1],
+					[4, 2, 1], // 25.07.2014
+					// [19, 2, 1],
+				]);
 
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
+				// options
+				var options = {
+					title: 'Позиции сайта в Яндекс и Google',
+					colors: ['#f00', '#4285F4'],
+					hAxis: {
+						title: 'Месяц продвижения',
+						titleTextStyle: {
+							italic: false,
+						},
+						format: '# месяц',
+					},
+					vAxis: {
+						title: 'Позиция сайта',
+						viewWindow: {
+							min: 1,
+							max: 50
+						},
+						baseline: 10,
+						baselineColor: "#f90",
+						direction: -1,
+						format: '# место',
+						gridlines: {
+							color: '#ddd',
+							count: 6
+						},
+						minorGridlines: {
+							color: '#EEE',
+							count: 1
+						},
+						logScale: true,
+						titleTextStyle: {
+							italic: false,
+						},
+					},
+					/*series: {
+						1: {curveType: 'function'}
+					}*/
+				};
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+				var chart = new google.visualization.LineChart(document.getElementById('chart_div_0'));
+				chart.draw(data, options);
+			}
+
+	function drawCurveTypes_1() {
+
+				// data
+				var data = new google.visualization.DataTable();
+				data.addColumn('number', 'X');
+				data.addColumn('number', 'Яндекс');
+				data.addColumn('number', 'Google');
+
+				data.addRows([
+					[0, 50, 50],
+					[1, 22, 39],
+					[2, 10, 35],
+					[3, 9, 32],
+					[4, 8, 30],
+					[5, 4, 14],
+					[6, 2, 14],
+					[7, 1, 12],
+					[8, 1, 12],
+					// [9, 1, 11],
+					// [10, 2, 10],
+					// [11, 2, 11],
+					// [13, 2, 14],
+					// [14, 1, 13],
+				]);
+
+				// options
+				var options = {
+					title: 'Позиции сайта в Яндекс и Google',
+					colors: ['#f00', '#4285F4'],
+					hAxis: {
+						title: 'Месяц продвижения',
+						titleTextStyle: {
+							italic: false,
+						},
+						format: '# месяц',
+					},
+					vAxis: {
+						title: 'Позиция сайта',
+						viewWindow: {
+							min: 1,
+							max: 50
+						},
+						baseline: 10,
+						baselineColor: "#f90",
+						direction: -1,
+						format: '# место',
+						gridlines: {
+							color: '#ddd',
+							count: 6
+						},
+						minorGridlines: {
+							color: '#EEE',
+							count: 1
+						},
+						logScale: true,
+						titleTextStyle: {
+							italic: false,
+						},
+					},
+					/*series: {
+						1: {curveType: 'function'}
+					}*/
+				};
+
+				var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
+				chart.draw(data, options);
+			}
+
+	function drawCurveTypes_2() {
+
+				// data
+				var data = new google.visualization.DataTable();
+				data.addColumn('number', 'X');
+				data.addColumn('number', 'Яндекс');
+				data.addColumn('number', 'Google');
+
+				data.addRows([
+					[0, 50, 50],
+					[1, 50, 50],
+					[2, 1, 22],
+					[3, 2, 38],
+					[4, 2, 36],
+					[5, 6, 38],
+					[6, 1, 33],
+					[7, 1, 15],
+				]);
+
+				// options
+				var options = {
+					title: 'Позиции сайта в Яндекс и Google',
+					colors: ['#f00', '#4285F4'],
+					hAxis: {
+						title: 'Месяц продвижения',
+						titleTextStyle: {
+							italic: false,
+						},
+						format: '# месяц',
+					},
+					vAxis: {
+						title: 'Позиция сайта',
+						viewWindow: {
+							min: 1,
+							max: 50
+						},
+						baseline: 10,
+						baselineColor: "#f90",
+						direction: -1,
+						format: '# место',
+						gridlines: {
+							color: '#ddd',
+							count: 6
+						},
+						minorGridlines: {
+							color: '#EEE',
+							count: 1
+						},
+						logScale: true,
+						titleTextStyle: {
+							italic: false,
+						},
+					},
+					/*series: {
+						1: {curveType: 'function'}
+					}*/
+				};
+
+				var chart = new google.visualization.LineChart(document.getElementById('chart_div_2'));
+				chart.draw(data, options);
+			}
+
+	function drawCurveTypes_3() {
+
+				// data
+				var data = new google.visualization.DataTable();
+				data.addColumn('number', 'X');
+				data.addColumn('number', 'Яндекс');
+				data.addColumn('number', 'Google');
+
+				data.addRows([
+					[0, 50, 50],
+					[1, 50, 50],
+					[2, 1, 22],
+					[3, 2, 38],
+					[4, 2, 36],
+					[5, 6, 38],
+					[6, 1, 33],
+					[7, 1, 15],
+				]);
+
+				// options
+				var options = {
+					title: 'Позиции сайта в Яндекс и Google',
+					colors: ['#f00', '#4285F4'],
+					hAxis: {
+						title: 'Месяц продвижения',
+						titleTextStyle: {
+							italic: false,
+						},
+						format: '# месяц',
+					},
+					vAxis: {
+						title: 'Позиция сайта',
+						viewWindow: {
+							min: 1,
+							max: 50
+						},
+						baseline: 10,
+						baselineColor: "#f90",
+						direction: -1,
+						format: '# место',
+						gridlines: {
+							color: '#ddd',
+							count: 6
+						},
+						minorGridlines: {
+							color: '#EEE',
+							count: 1
+						},
+						logScale: true,
+						titleTextStyle: {
+							italic: false,
+						},
+					},
+					/*series: {
+						1: {curveType: 'function'}
+					}*/
+				};
+
+				var chart = new google.visualization.LineChart(document.getElementById('chart_div_3'));
+				chart.draw(data, options);
+			}
 
 	// console.log("Качество - Landing2Top.ru")
 
