@@ -1,0 +1,38 @@
+@import "bourbon"
+
+// Light color
+$lc: #fff
+$lca: #f90
+$lcah: #f90
+
+// Dark color
+$dc: #222
+$dca: #f90
+$dcah: #fb0
+
+
+// common color
+$copper1: #C8735C
+$oc: #37301f
+
+// Main Transition +mt(.15s)
+=mt($time)
+	transition: all $time ease
+=br5
+	border-radius: 5px
+=br10
+	border-radius: 10px
+=bsh
+	box-shadow: 0 3px 3px #111
+
+=darken_bg($color)
+	background: darken($color, 3%)
+
+=darken_bdc($color)
+	border-color: darken($color, 3%)
+
+=lighten_bg($color)
+	background: lighten($color, 3%)
+
+=lighten_bdc($color)
+	border-color: lighten($color, 3%)
