@@ -18,9 +18,9 @@ $RECYCLE.BIN/
 *.lnk
 
 node_modules/
-.sublime-workspace
-.sublime-project
-.log
+*.sublime-workspace
+*.sublime-project
+*.log
 
 # =========================
 # Operating System Files
