@@ -466,6 +466,11 @@ $(function() {
 				chart.draw(data, options);
 			}
 
+	// 
+	 
+
+
+
 	// console.log("Качество - Landing2Top.ru")
 
 });
