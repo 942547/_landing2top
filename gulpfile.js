@@ -42,6 +42,7 @@ gulp.task('scripts', function() {
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.dragopen.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/loader.js',
+		// './app/libs/gviz-api/gviz-api.js',
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js

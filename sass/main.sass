@@ -3,7 +3,6 @@
 
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
-@import "app/libs/font-awesome/css/font-awesome.min"
 @import "app/libs/hover/hover"
 @import "app/libs/superfish/dist/css/superfish"
 @import "app/libs/superfish/dist/css/megafish"
@@ -11,89 +10,99 @@
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.dragopen"
 @import "app/libs/toggle-mnu/toggle-mnu.sass"
 
+// fontello fonts-icons
+@import "app/libs/fontello/css/animation"
+@import "app/libs/fontello/css/fontello"
+@import "app/libs/fontello/css/fontello-codes"
+@import "app/libs/fontello/css/fontello-embedded"
+@import "app/libs/fontello/css/fontello-ie7"
+@import "app/libs/fontello/css/fontello-ie7-codes"
+
+
 // *::-webkit-input-placeholder
-// 	color: #777
-// 	opacity: 1
+//  color: $da
+//  opacity: 1
 
 // *:-moz-placeholder
-// 	color: #777
-// 	opacity: 1
+//  color: $da
+//  opacity: 1
 
 // *::-moz-placeholder
-// 	color: #777
-// 	opacity: 1
+//  color: $da
+//  opacity: 1
 
 // *:-ms-input-placeholder
-// 	color: #777
-// 	opacity: 1
+//  color: $da
+//  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: $dc
+	color: $ba
 body input:required:valid,
 body textarea:required:valid
-	color: $dc
+	color: $ba
 
 //Custom Styles Here
 .results
-	background: #fff
+	background: $ff
+	color: $ca
 
-.result_seo
-	text-align: center
-	margin-bottom: 80px
-	>span
-		h3
-			display: inline
-			font-size: em(20)
+.result, .guarantee
+	.img_wrap
+		float: left
+		width: 50px
+		margin-right: 15px
+		img
+			width: 50px
+			height: 50px
+	.td
+		height: 85px
+	.header
+		font-size: em(24)
+		line-height: em(18)
+	.desc
+		margin-top: 4px
+		color: $da
+		a
+			color: $da
+	.percent
+		font-size: em(30)
+		// line-height: em(20)
+	.h_posit
+		margin-top: 50px
+		text-align: center
 	.total
-		margin-bottom: 10px
-	p
-		font-size: em(14)
-		line-height: em(21)
-		margin-bottom: 20px
-		text-align: justify
-		.percent
-			display: block
-			text-align: center
-			font-size: em(34)
-			margin-top: 20px
+		margin-top: 50px
 
-	a
-		display: block
-
-	a, .total
-		padding: 10px
-		color: #777
-		background: #eee
-		font-size: em(18)
-		text-shadow: 0 1px 0 #fff
-		margin-top: 20px
-		margin-bottom: 20px
-
-div[id^="chart_div"]
-	margin-bottom: 20px
-
+// guarantees
 .guarantees
-	background: #eee
-	color: #777
-	text-shadow: 0 1px 0 #fff
+	background: #f5f5f5
+	// background: $ee
+	// text-shadow: 0 1px 0 $fa
 
 .guarantee
-	text-align: center
-	>span
-		h3
-			display: inline
-			font-size: em(20)
-	a
-		display: block
-		color: #777
-		margin-top: 10px
-		margin-bottom: 60px
+
+a.search_result
+	margin-top: 12px
+	display: inline-block
+	text-decoration: underline
 
 
 .services
-	background: #fff
-	
+	background: $ff
+
+.service
+	margin-bottom: 40px
+
+
+.contacts
+	background: $bb
+	img
+		border-radius: 50%
+		width: 200px
+		height: 200px
+		border: solid 3px $ff
+		float: left
 
 //ALWAYS END
 @import "media"

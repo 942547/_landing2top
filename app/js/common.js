@@ -20,7 +20,7 @@ $(function() {
 						url: "mail.php", //Change
 						data: th.serialize()
 				}).done(function() {
-						alert("Спасибо! Мы скоро с вами свяжемся.");
+						alert("Спасибо! Скоро я с вами свяжусь.");
 						setTimeout(function() {
 								// Done Functions
 								th.trigger("reset");
@@ -57,22 +57,22 @@ $(function() {
 		// threshold: 50,
 		},
 		"extensions": [
-		"pageshadow",
+		// "pageshadow",
 		"theme-dark",
-			// "theme-black",
-			// "theme-white",
+			"effect-listitems-slide",
+			"effect-menu-slide",
+			"effect-panels-zoom",
 			// "border-offset",
 			// "effect-listitems-drop",
 			// "effect-listitems-fade",
-			"effect-listitems-slide",
 			// "effect-menu-fade",
-			"effect-menu-slide",
 			// "effect-menu-zoom",
 			// "effect-panels-slide-0",
 			// "effect-panels-slide-100",
-			"effect-panels-zoom",
 			// "pagedim-black",
 			// "pagedim-white",
+			// "theme-black",
+			// "theme-white",
 			],
 
 			navbar: {
@@ -127,7 +127,6 @@ $(function() {
 	google.charts.setOnLoadCallback(drawChart_0_1);
 	google.charts.setOnLoadCallback(drawChart_1_1);
 	google.charts.setOnLoadCallback(drawChart_2_1);
-	google.charts.setOnLoadCallback(drawCurveTypes_3);
 
 	function drawCurveTypes_0() {
 
@@ -148,21 +147,31 @@ $(function() {
 
 				// options
 				var options = {
-					title: 'Позиции сайта в Яндекс и Google',
+					backgroundColor: '#f5f5f5',
+					colors: ['#535353', '#848484'],
+					// curveType: 'function',
+					hAxis: {
+						titleTextStyle: {
+							italic: false
+						},
+						format: '# месяц',
+						minorGridlines: {
+							color: '#cecece',
+							count: 1
+						},
+					},
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16
+						}
+					},
+					lineWidth: 2,
+					pointSize: 6,
 					titleTextStyle: {
 						fontSize: 12
 					},
-					// width: 300,
-					colors: ['#f00', '#4285F4'],
-					hAxis: {
-						title: 'Месяц продвижения',
-						titleTextStyle: {
-							italic: false,
-						},
-						format: '# месяц',
-					},
 					vAxis: {
-						title: 'Позиция сайта',
 						viewWindow: {
 							min: 1,
 							max: 50
@@ -172,21 +181,18 @@ $(function() {
 						direction: -1,
 						format: '# место',
 						gridlines: {
-							color: '#ddd',
+							color: '#cecece',
 							count: 6
 						},
 						minorGridlines: {
-							color: '#EEE',
+							color: '#cecece',
 							count: 1
 						},
-						logScale: true,
+						/*logScale: true*/
 						titleTextStyle: {
-							italic: false,
+							italic: false
+						}
 						},
-					},
-					/*series: {
-						1: {curveType: 'function'}
-					}*/
 				};
 
 				var chart = new google.visualization.LineChart(document.getElementById('chart_div_0'));
@@ -220,21 +226,31 @@ $(function() {
 
 				// options
 				var options = {
-					title: 'Позиции сайта в Яндекс и Google',
+					backgroundColor: '#f5f5f5',
+					colors: ['#535353', '#848484'],
+					// curveType: 'function',
+					hAxis: {
+						titleTextStyle: {
+							italic: false
+						},
+						format: '# месяц',
+						minorGridlines: {
+							color: '#cecece',
+							count: 1
+						},
+					},
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16
+						}
+					},
+					lineWidth: 2,
+					pointSize: 6,
 					titleTextStyle: {
 						fontSize: 12
 					},
-					// width: 300,
-					colors: ['#f00', '#4285F4'],
-					hAxis: {
-						title: 'Месяц продвижения',
-						titleTextStyle: {
-							italic: false,
-						},
-						format: '# месяц',
-					},
 					vAxis: {
-						title: 'Позиция сайта',
 						viewWindow: {
 							min: 1,
 							max: 50
@@ -244,21 +260,18 @@ $(function() {
 						direction: -1,
 						format: '# место',
 						gridlines: {
-							color: '#ddd',
+							color: '#cecece',
 							count: 6
 						},
 						minorGridlines: {
-							color: '#EEE',
+							color: '#cecece',
 							count: 1
 						},
-						logScale: true,
+						/*logScale: true*/
 						titleTextStyle: {
-							italic: false,
+							italic: false
+						}
 						},
-					},
-					/*series: {
-						1: {curveType: 'function'}
-					}*/
 				};
 
 				var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
@@ -286,21 +299,31 @@ $(function() {
 
 				// options
 				var options = {
-					title: 'Позиции сайта в Яндекс и Google',
+					backgroundColor: '#f5f5f5',
+					colors: ['#535353', '#848484'],
+					// curveType: 'function',
+					hAxis: {
+						titleTextStyle: {
+							italic: false
+						},
+						format: '# месяц',
+						minorGridlines: {
+							color: '#cecece',
+							count: 1
+						},
+					},
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16
+						}
+					},
+					lineWidth: 2,
+					pointSize: 6,
 					titleTextStyle: {
 						fontSize: 12
 					},
-					// width: 300,
-					colors: ['#f00', '#4285F4'],
-					hAxis: {
-						title: 'Месяц продвижения',
-						titleTextStyle: {
-							italic: false,
-						},
-						format: '# месяц',
-					},
 					vAxis: {
-						title: 'Позиция сайта',
 						viewWindow: {
 							min: 1,
 							max: 50
@@ -310,90 +333,21 @@ $(function() {
 						direction: -1,
 						format: '# место',
 						gridlines: {
-							color: '#ddd',
+							color: '#cecece',
 							count: 6
 						},
 						minorGridlines: {
-							color: '#EEE',
+							color: '#cecece',
 							count: 1
 						},
-						logScale: true,
+						/*logScale: true*/
 						titleTextStyle: {
-							italic: false,
+							italic: false
+						}
 						},
-					},
-					/*series: {
-						1: {curveType: 'function'}
-					}*/
 				};
 
 				var chart = new google.visualization.LineChart(document.getElementById('chart_div_2'));
-				chart.draw(data, options);
-			}
-
-	function drawCurveTypes_3() {
-
-				// data
-				var data = new google.visualization.DataTable();
-				data.addColumn('number', 'X');
-				data.addColumn('number', 'Яндекс');
-				data.addColumn('number', 'Google');
-
-				data.addRows([
-					[0, 50, 50],
-					[1, 50, 50],
-					[2, 1, 22],
-					[3, 2, 38],
-					[4, 2, 36],
-					[5, 6, 38],
-					[6, 1, 33],
-					[7, 1, 15],
-				]);
-
-				// options
-				var options = {
-					title: 'Позиции сайта в Яндекс и Google',
-					titleTextStyle: {
-						fontSize: 12
-					},
-					// width: 300,
-					colors: ['#f00', '#4285F4'],
-					hAxis: {
-						title: 'Месяц продвижения',
-						titleTextStyle: {
-							italic: false,
-						},
-						format: '# месяц',
-					},
-					vAxis: {
-						title: 'Позиция сайта',
-						viewWindow: {
-							min: 1,
-							max: 50
-						},
-						baseline: 10,
-						baselineColor: "#f90",
-						direction: -1,
-						format: '# место',
-						gridlines: {
-							color: '#ddd',
-							count: 6
-						},
-						minorGridlines: {
-							color: '#EEE',
-							count: 1
-						},
-						logScale: true,
-						titleTextStyle: {
-							italic: false,
-						},
-					},
-					/*series: {
-						1: {curveType: 'function'}
-					}*/
-				};
-
-				var chart = new google.visualization.LineChart(document.getElementById('chart_div_3'));
 				chart.draw(data, options);
 			}
 
@@ -406,7 +360,14 @@ $(function() {
 				]);
 
 				var options = {
-					title: 'Кол-во поситителей, до и после продвижения',
+					backgroundColor: '#f5f5f5',
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16,
+						},
+					},
+					// title: 'Кол-во поситителей',
 					titleTextStyle: {
 						fontSize: 12
 					},
@@ -429,7 +390,14 @@ $(function() {
 				]);
 
 				var options = {
-					title: 'Кол-во поситителей, до и после продвижения',
+					backgroundColor: '#f5f5f5',
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16,
+						},
+					},
+					// title: 'Кол-во поситителей',
 					titleTextStyle: {
 						fontSize: 12
 					},
@@ -452,7 +420,14 @@ $(function() {
 				]);
 
 				var options = {
-					title: 'Кол-во поситителей, до и после продвижения',
+					backgroundColor: '#f5f5f5',
+					legend: {
+						position: 'bottom',
+						textStyle: {
+							fontSize: 16,
+						},
+					},
+					// title: 'Кол-во поситителей',
 					titleTextStyle: {
 						fontSize: 12
 					},
@@ -466,10 +441,20 @@ $(function() {
 				chart.draw(data, options);
 			}
 
-	// 
-	 
-
-
+	// jQuery scroll
+	$(".mnu").on("click","a", function (event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
+ 
+        // получем идентификатор блока из атрибута href
+        var id  = $(this).attr('href'),
+ 
+        // находим высоту, на которой расположен блок
+            top = $(id).offset().top;
+         
+        // анимируем переход к блоку, время: 800 мс
+        $('body,html').animate({scrollTop: top}, 800);
+    });
 
 	// console.log("Качество - Landing2Top.ru")
 
