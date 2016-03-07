@@ -1,15 +1,6 @@
 Font license info
 
 
-## Typicons
-
-   (c) Stephen Hutchings 2012
-
-   Author:    Stephen Hutchings
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://typicons.com/
-
-
 ## Font Awesome
 
    Copyright (C) 2012 by Dave Gandy
@@ -28,40 +19,13 @@ Font license info
    Homepage:  http://www.entypo.com
 
 
-## Elusive
+## Typicons
 
-   Copyright (C) 2013 by Aristeides Stathopoulos
+   (c) Stephen Hutchings 2012
 
-   Author:    Aristeides Stathopoulos
+   Author:    Stephen Hutchings
    License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://aristeides.com/
-
-
-## Zocial
-
-   Copyright (C) 2012 by Sam Collins
-
-   Author:    Sam Collins
-   License:   MIT (http://opensource.org/licenses/mit-license.php)
-   Homepage:  http://zocial.smcllns.com/
-
-
-## Brandico
-
-   (C) 2012 by Vitaly Puzrin
-
-   Author:    Crowdsourced, for Fontello project
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  
-
-
-## Web Symbols
-
-   Copyright (c) 2011 by Just Be Nice studio. All rights reserved.
-
-   Author:    Just Be Nice studio
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://www.justbenicestudio.com/
+   Homepage:  http://typicons.com/
 
 
 ## Iconic
@@ -71,5 +35,14 @@ Font license info
    Author:    P.J. Onori
    License:   SIL (http://scripts.sil.org/OFL)
    Homepage:  http://somerandomdude.com/work/iconic/
+
+
+## Zocial
+
+   Copyright (C) 2012 by Sam Collins
+
+   Author:    Sam Collins
+   License:   MIT (http://opensource.org/licenses/mit-license.php)
+   Homepage:  http://zocial.smcllns.com/
 
 

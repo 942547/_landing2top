@@ -116,9 +116,6 @@ $(function() {
 		$(".toggle-mnu").removeClass("on");
 	});
 
-	// imagefill
-	// $('.imagefill').imagefill();
-
 	// Google
 	google.charts.load('current', {packages: ['corechart', 'line', 'bar']});
 	google.charts.setOnLoadCallback(drawCurveTypes_0);
@@ -148,7 +145,7 @@ $(function() {
 				// options
 				var options = {
 					backgroundColor: '#f5f5f5',
-					colors: ['#535353', '#848484'],
+					colors: ['#222', '#848484'],
 					// curveType: 'function',
 					hAxis: {
 						titleTextStyle: {
@@ -227,7 +224,7 @@ $(function() {
 				// options
 				var options = {
 					backgroundColor: '#f5f5f5',
-					colors: ['#535353', '#848484'],
+					colors: ['#222', '#848484'],
 					// curveType: 'function',
 					hAxis: {
 						titleTextStyle: {
@@ -300,7 +297,7 @@ $(function() {
 				// options
 				var options = {
 					backgroundColor: '#f5f5f5',
-					colors: ['#535353', '#848484'],
+					colors: ['#222', '#848484'],
 					// curveType: 'function',
 					hAxis: {
 						titleTextStyle: {
@@ -443,17 +440,27 @@ $(function() {
 
 	// jQuery scroll
 	$(".mnu").on("click","a", function (event) {
-        // исключаем стандартную реакцию браузера
-        event.preventDefault();
+				// исключаем стандартную реакцию браузера
+				event.preventDefault();
  
-        // получем идентификатор блока из атрибута href
-        var id  = $(this).attr('href'),
+				// получем идентификатор блока из атрибута href
+				var id  = $(this).attr('href'),
  
-        // находим высоту, на которой расположен блок
-            top = $(id).offset().top;
-         
-        // анимируем переход к блоку, время: 800 мс
-        $('body,html').animate({scrollTop: top}, 800);
+				// находим высоту, на которой расположен блок
+						top = $(id).offset().top;
+				 
+				// анимируем переход к блоку, время: 800 мс
+				$('body,html').animate({scrollTop: top}, 800);
+		});
+	
+	
+	// jquery.textillate
+    $('.tlt').textillate({ in : {
+            delay: 50,
+            delayScale: 1.5,
+            effect: 'flash',
+            shuffle: true,
+        },
     });
 
 	// console.log("Качество - Landing2Top.ru")

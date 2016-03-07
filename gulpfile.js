@@ -36,16 +36,18 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/pjax/jquery.pjax.js',
-		'./app/libs/imagefill/js/jquery-imagefill.js',
 		'./app/libs/superfish/dist/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/hammer.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.dragopen.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/loader.js',
-		// './app/libs/gviz-api/gviz-api.js',
+		'./app/libs/CreativeLinkEffects/js/modernizr.custom.js',
+		// textillate
+		'./app/libs/textillate/textillate.js',
+		'./app/libs/textillate/assets/jquery.lettering.js',
 		])
 		.pipe(concat('libs.js'))
-		.pipe(uglify()) //Minify libs.js
+		// .pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 

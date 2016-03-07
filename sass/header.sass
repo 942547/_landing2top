@@ -46,7 +46,7 @@ a[href^="http://"]:not(.not_out_link),
 a[href^="https://"]:not(.not_out_link)
 	text-decoration: none
 	&::after
-		content: "\e817"
+		content: "\e802"
 		font-family: fontello
 		margin: 0 em(5)
 
@@ -116,9 +116,6 @@ strong, b, h1, h2, h3, h4, h5, h6
 h1, h2, h3, h4, h5, h6
 	text-align: center
 
-h1
-	font-size: em(30)
-
 h2
 	font-size: em(36)
 
@@ -143,6 +140,11 @@ p
 
 *
 	outline-color: $ac
+
+b
+	background: $ac
+	color: $ba
+	padding: 0 em(5) 0 em(5)
 
 // sf-menu
 ul.sf-menu
@@ -207,15 +209,15 @@ div.sf-mega
 
 	.mobile_phone
 		&::after, &::before
-			content: '\e80d'
+			content: '\e80e'
 
 	.email
 		&::after, &::before
-			content: '\e80f'
+			content: '\e800'
 
 	.share
 		&::after, &::before
-			content: '\e816'
+			content: '\e811'
 
 	div.sf-mega
 		text-align: center
@@ -254,6 +256,11 @@ div.sf-mega
 		>li
 			padding-top: 13px
 			padding-bottom: 13px
+			padding-left: 0px
+			padding-right: 0px
+			>a
+				padding-left: 10px
+				padding-right: 10px				
 
 a.logo
 	display: inline-block
@@ -290,32 +297,6 @@ a.logo
 	border-radius: 100px
 	box-shadow: inset 0 1px 2px #000
 	padding: 5px
-	/* a
-		border-radius: 50%
-		border: solid 2px	$ff
-		display: block
-		height: 20px
-		margin: 5px 5px
-		position: relative
-		width: 20px
-		&::before
-			content: ''
-			position: absolute
-			top: 10px
-			left: 10px
-			width: 0%
-			height: 0%
-			+mt(.15s)
-		&:hover, &:active
-			&::before
-				content: ''
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				background: $ac
-				border-radius: 50% */
 	ul
 		margin: 0
 		li
@@ -401,14 +382,21 @@ header
 		width: 100%
 	.td
 		height: calc(100vh - 45.33px - 88px - 40px)
-		// min-height: 100%
 	h1
-		span
+		font-size: em(42)
+		.span, .word2
 			color: $ac
+		span
+			visibility: hidden
+	.desc
+		text-align: center
+		color: $ee
+		span
+			visibility: hidden
 
 	form
 		text-align: center
-		margin: 80px 0 30px 0
+		margin: 40px 0 40px 0
 		max-width: 720px
 		margin-left: auto
 		margin-right: auto
@@ -461,9 +449,6 @@ input[name="Бюджет/мес"]
 	margin: 0
 	padding: 5px 20px
 	width: 25%
-	&:active, &:hover
-		+darken_bg($ac)
-		+darken_bdc($ac)
 
 .hidden_inputs
 	display: none
@@ -494,8 +479,3 @@ input[name="Бюджет/мес"]
 	font-size: em(38)
 	margin: 0
 	padding: 5px 20px
-
-
-
-// ##############################
-// 

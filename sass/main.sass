@@ -9,6 +9,8 @@
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.dragopen"
 @import "app/libs/toggle-mnu/toggle-mnu.sass"
+@import "app/libs/CreativeLinkEffects/css/component"
+@import "app/libs/textillate/assets/animate"
 
 // fontello fonts-icons
 @import "app/libs/fontello/css/animation"
@@ -43,6 +45,34 @@ body textarea:required:valid
 	color: $ba
 
 //Custom Styles Here
+
+// seo_vs_ad
+.seo_vs_ad
+	background: #f5f5f5
+	// color: $ba
+	.mu_container
+		max-width: 800px
+		margin-left: auto
+		margin-right: auto
+	h2
+		font-size: em(28)
+		margin-bottom: em(10)
+		line-height: em(20)
+	p
+		font-size: em(17)
+		line-height: em(28)
+		margin-bottom: em(30)
+	h3
+		font-size: em(24)
+		margin-bottom: em(10)
+	ol
+		list-style: decimal
+		margin-bottom: em(20)
+		margin-left: em(20)
+		
+
+
+// results
 .results
 	background: $ff
 	color: $ca
@@ -65,6 +95,11 @@ body textarea:required:valid
 		color: $da
 		a
 			color: $da
+	.p_accent
+		margin-top: 10px
+		// background: $ac
+		// padding: 10px
+		// color: $ba
 	.percent
 		font-size: em(30)
 		// line-height: em(20)
@@ -74,6 +109,7 @@ body textarea:required:valid
 	.total
 		margin-top: 50px
 
+
 // guarantees
 .guarantees
 	background: #f5f5f5
@@ -82,19 +118,39 @@ body textarea:required:valid
 
 .guarantee
 
-a.search_result
+.h_search
 	margin-top: 12px
+	font-size: em(18)
+
+a.search_result
 	display: inline-block
 	text-decoration: underline
 
 
+// services
 .services
-	background: $ff
+	// background: $ac
+	color: $ff
 
 .service
 	margin-bottom: 40px
+	i
+		margin-right: 15px
+	h3
+		font-size: em(24)
+	.image_container
+		width: 350px
+		height: 200px
+		margin-right: auto
+		margin-left: auto
+		background: url(https://www.digicert.com/images/seo-rank-boost.png)
+	p
+		max-width: 350px
+		margin-right: auto
+		margin-left: auto
 
 
+// contacts
 .contacts
 	background: $bb
 	img
