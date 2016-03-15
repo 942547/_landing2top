@@ -57,8 +57,12 @@ a[href^="https://"]:not(.not_out_link)
 	color: $ca
 	a, &:focus
 		color: $ca
+		display: inline-block
+		padding: 0 em(5) 0 em(5)
 		&:hover, &:active
-			color: $ac
+			color: $ba
+			background: $ac
+			+mt(.15s)
 	.main_mnu
 		a
 			&::after
@@ -77,6 +81,10 @@ a[href^="https://"]:not(.not_out_link)
 		a
 			&::after
 				background-color: $ac
+	p
+		a
+			&:hover, &:active, &:focus
+				text-decoration: none
 
 
 // ##############################
@@ -109,7 +117,7 @@ section
 	padding-top: 80px
 	padding-bottom: 80px
 	
-strong, b, h1, h2, h3, h4, h5, h6
+strong, b, h1, h2, h3, h4, h5, h6, p a
 	font-family: "RobotoBold", sanserif
 	font-weight: normal
 
@@ -209,7 +217,7 @@ div.sf-mega
 
 	.mobile_phone
 		&::after, &::before
-			content: '\e80e'
+			content: '\e80a'
 
 	.email
 		&::after, &::before
@@ -217,7 +225,7 @@ div.sf-mega
 
 	.share
 		&::after, &::before
-			content: '\e811'
+			content: '\e80d'
 
 	div.sf-mega
 		text-align: center
@@ -265,7 +273,7 @@ div.sf-mega
 a.logo
 	display: inline-block
 	padding: 20px 0 10px 0
-	&:hover
+	&:hover, &:focus, &:active
 		text-decoration: none
 		color: inherit
 	img

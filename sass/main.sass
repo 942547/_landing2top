@@ -4,8 +4,8 @@
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 @import "app/libs/hover/hover"
-@import "app/libs/superfish/dist/css/superfish"
-@import "app/libs/superfish/dist/css/megafish"
+// @import "app/libs/superfish/dist/css/superfish"
+// @import "app/libs/superfish/dist/css/megafish"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.dragopen"
 @import "app/libs/toggle-mnu/toggle-mnu.sass"
@@ -50,12 +50,13 @@ body textarea:required:valid
 .seo_vs_ad
 	background: #f5f5f5
 	// color: $ba
+	border-bottom: dashed 2px $ba
 	.mu_container
 		max-width: 800px
 		margin-left: auto
 		margin-right: auto
 	h2
-		font-size: em(28)
+		font-size: em(26)
 		margin-bottom: em(10)
 		line-height: em(20)
 	p
@@ -63,12 +64,40 @@ body textarea:required:valid
 		line-height: em(28)
 		margin-bottom: em(30)
 	h3
-		font-size: em(24)
+		font-size: em(22)
 		margin-bottom: em(10)
 	ol
 		list-style: decimal
 		margin-bottom: em(20)
 		margin-left: em(20)
+		
+.center
+	text-align: center
+		
+.toggle_hidden_strategy
+	display: inline-block
+	cursor: pointer
+	text-align: center
+	+mt(.15s)
+	font-family: "RobotoBold", sanserif
+	font-weight: normal
+	padding: 0 35px 0 5px
+	&:after, &:before
+		content: '\e813'
+		font-family: fontello
+		padding-right: 0
+		+mt(.3s)
+	&.on
+		&:after, &:before
+			// content: '\e814'
+			transform: rotateX(180deg)
+	&:hover
+		color: $ba
+		background: $ac
+	
+.hidden_strategy
+	display: none
+	margin-top: 20px
 		
 
 
@@ -78,6 +107,7 @@ body textarea:required:valid
 	color: $ca
 
 .result, .guarantee
+	margin-bottom: 60px
 	.img_wrap
 		float: left
 		width: 50px
@@ -127,38 +157,25 @@ a.search_result
 	text-decoration: underline
 
 
-// services
-.services
-	// background: $ac
-	color: $ff
-
-.service
-	margin-bottom: 40px
-	i
-		margin-right: 15px
-	h3
-		font-size: em(24)
-	.image_container
-		width: 350px
-		height: 200px
-		margin-right: auto
-		margin-left: auto
-		background: url(https://www.digicert.com/images/seo-rank-boost.png)
-	p
-		max-width: 350px
-		margin-right: auto
-		margin-left: auto
-
-
 // contacts
 .contacts
-	background: $bb
-	img
-		border-radius: 50%
-		width: 200px
-		height: 200px
-		border: solid 3px $ff
-		float: left
+	background: url(/img/contacts_bg.jpg) center $ba
+	background-size: cover
+	ul
+		text-align: center
+	li
+		margin: 10px 0 10px 0
+	a
+		color: $ff
+		display: inline-block
+		padding: 0 em(5) 0 em(5)
+		+mt(.15s)
+		&:active,
+		&:focus,
+		&:hover
+			color: $ba
+			background: $ac
+			text-decoration: none
 
 //ALWAYS END
 @import "media"

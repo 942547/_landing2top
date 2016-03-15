@@ -1,11 +1,16 @@
 var gulp         = require('gulp'),
-		sass         = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
-		minifycss    = require('gulp-minify-css'),
-		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglifyjs');
+		minifycss    = require('gulp-minify-css'),
+		rename       = require('gulp-rename'),
+		sass         = require('gulp-sass'),
+		uglify       = require('gulp-uglifyjs'),
+		
+		del						= require('del'),
+		imagemin 			= require('gulp-imagemin'),
+		pngquant 			= require('imagemin-pngquant'),
+		cache 				= require('gulp-cache');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
@@ -35,7 +40,7 @@ gulp.task('scripts', function() {
 		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
-		'./app/libs/pjax/jquery.pjax.js',
+		// './app/libs/pjax/jquery.pjax.js',
 		'./app/libs/superfish/dist/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/hammer.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
@@ -47,7 +52,7 @@ gulp.task('scripts', function() {
 		'./app/libs/textillate/assets/jquery.lettering.js',
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
@@ -59,3 +64,35 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+gulp.task('build', ['clean', 'img', 'styles', 'scripts'], function(){
+	
+	var buildCss = gulp.src('app/css/*css')
+	.pipe(gulp.dest('dist/css'));
+	
+	var buildFonts = gulp.src('app/fonts/**/*')
+	.pipe(gulp.dest('dist/fonts'));
+	
+	var buildJs = gulp.src('app/js/**/*')
+	.pipe(gulp.dest('dist/js'));
+	
+	var buildHtml = gulp.src('app/*')
+	.pipe(gulp.dest('dist'));
+	
+});
+
+gulp.task('clean', function(){
+	return del.sync('dist');
+});
+
+gulp.task('img', function() {
+	return gulp.src('app/img/**/*')
+	.pipe(cache(imagemin({
+		interlaced: true,
+		prograssive: true,
+		svgoPlugins: [{removeViewBox: false}],
+		une: [pngquant()]
+	})))
+	.pipe(gulp.dest('dist/img'));
+});
