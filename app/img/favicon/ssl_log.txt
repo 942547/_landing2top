@@ -1,0 +1,3 @@
+
+[192.168.1.122 -> 103.235.46.166]	[HTTP]
+{"body":"{\"av\":\"6.4.0.1\",\"ch\":\"gp\",\"co\":\"RU\",\"id\":\"170B5F033B616D79BEC7D543CB3E418D\",\"la\":\"ru\",\"pr\":\"250205301189300\",\"pt\":\"ma\",\"sv\":\"21\"}","header":{"attachment":{"content-type":0},"crcCode":-1410399999,"sessionId":0,"length":129,"priority":0,"type":4}}

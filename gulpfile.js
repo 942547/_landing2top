@@ -33,7 +33,7 @@ gulp.task('styles', function () {
 	.pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', ['common-min'], function() {
 	return gulp.src([
 		'./app/libs/modernizr/modernizr.js',
 		'./app/libs/jquery/jquery-1.11.2.min.js',
@@ -95,4 +95,10 @@ gulp.task('img', function() {
 		une: [pngquant()]
 	})))
 	.pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('common-min', function(){
+	return gulp.src('app/js/common.js')
+	.pipe(uglify()) //Minify libs.js
+	.pipe(gulp.dest('app/js'));
 });

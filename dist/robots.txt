@@ -1,4 +1,4 @@
 User-agent: *
-
+Disallow: /?*
 Sitemap: http://prodvizheniesajtabelgorod.ru/sitemap.xml
-Host: prodvizheniesajtabelgorod.ru/
+Host: prodvizheniesajtabelgorod.ru
